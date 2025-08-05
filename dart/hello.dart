@@ -15,5 +15,6 @@ void main () {
   
   print("\n Persönliche Infos\n $adresse");
   print("\n Zahl: $zahl\n pi: $pi");
+  print("\nEnde");
 
 }
