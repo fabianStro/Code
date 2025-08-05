@@ -12,7 +12,9 @@ void main () {
   for(counter=1;counter<=5;counter++) {
     print(" $counter. Hello World!");                   
   }
-  
+  print("");
+  print("");
+  print("");
   print("\n Persönliche Infos\n $adresse");
   print("\n Zahl: $zahl\n pi: $pi");
 
