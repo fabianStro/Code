@@ -2,50 +2,57 @@
 import 'dart:io';
 
 void main () {
-  int counter;
+  // int counter;
   // double zahl = 12.83;
-  const double pi = 3.1415926535897932;
-  String greet = "Hello\n This is my first dart programm";
-  var adresse = {' Fabian' , ' Strottmann' , '\n  Schilfkamp 20' , ' 30851 Langehagen'};
+  // const double pi = 3.1415926535897932;
+  String greet = "Hello\nThis is my first dart programm";
+  var adresse = {'Fabian' , 'Strottmann' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
   var name;
   var decision;
 
-  // print("Arraygroesse");
-  // print(adresse.length);
+  print("Arraygroesse");
+  print(adresse.length);
+  print(adresse.contains('Fabian'));
+  // adresse.indexOf('Fabian');
 
-  print("\n $greet \n");
-  print(" Insert name: ");
+
+  print("\n\t-->Start<--\n");
+  print("$greet\n");
+
+  print("Insert name: ");
   name = stdin.readLineSync()!; 
   
-  print("\n Hello $name\n");
+  print("\n--------------------------------------------------");
+  print("\nHello $name\n");
 
-  for(counter=1;counter<=2;counter++) {
-    print(" $counter. Hello World!");                 
-  }
+  /* for(counter=1;counter<=2;counter++) {
+    print(" $counter.Hello World!");                 
+  } */
   
-  print("\n\n Calculator (calc) or perosnal information (pi)?");
+  print("\nCalculator (calc) or perosnal information (pi)?");
+  print("Zahlenbereich -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807.");
   decision = stdin.readLineSync();
 
   if(decision == "calc") {
 
-    print(" Insert number #1: ");
+    print("Insert number #1: ");
     double zahl = double.parse(stdin.readLineSync()!);
 
-    print(" Insert number #2: ");
+    print("Insert number #2: ");
     double zahl2 = double.parse(stdin.readLineSync()!);
 
     double result = zahl + zahl2;
-    print("\n Result: $result");
+    print("\nResult: $result");
 
   } else if(decision == "pi") {
     
-    print("\n Personal information\n $adresse");
+    print("\nPersonal information\n $adresse");
     // print("\n pi: $pi");
 
   }
   
-  print("\n Was für ein Hohn");
-  print("\n Ende \n");
+  print("\nWas für ein Hohn");
+  print("\n\t-->Ende<--\n");
 
 
 }
