@@ -13,6 +13,7 @@ void main () {
   print("\n $greet \n");
   print(" Insert name: ");
   name = stdin.readLineSync()!; 
+  
   print("\n Hello $name\n");
 
   for(counter=1;counter<=2;counter++) {
