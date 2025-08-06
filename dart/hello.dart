@@ -10,6 +10,9 @@ void main () {
   var name;
   var decision;
 
+  // print("Arraygroesse");
+  // print(adresse.length);
+
   print("\n $greet \n");
   print(" Insert name: ");
   name = stdin.readLineSync()!; 
@@ -20,10 +23,10 @@ void main () {
     print(" $counter. Hello World!");                 
   }
   
-  print("\n\n Calculator or perosnal information?");
+  print("\n\n Calculator (calc) or perosnal information (pi)?");
   decision = stdin.readLineSync();
 
-  if(decision == "Calculator") {
+  if(decision == "calc") {
 
     print(" Insert number #1: ");
     double zahl = double.parse(stdin.readLineSync()!);
@@ -34,13 +37,14 @@ void main () {
     double result = zahl + zahl2;
     print("\n Result: $result");
 
-  } else if(decision == "personal information") {
+  } else if(decision == "pi") {
     
     print("\n Personal information\n $adresse");
     // print("\n pi: $pi");
 
   }
   
+  print("\n Was für ein Hohn");
   print("\n Ende \n");
 
 
