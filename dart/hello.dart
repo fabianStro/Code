@@ -1,18 +1,17 @@
-// import 'dart:math';
 import 'dart:io';
 
 void main () {
-  // int counter;
-  // double zahl = 12.83;
-  // const double pi = 3.1415926535897932;
   String greet = "Hello\nThis is my first dart programm";
-  var adresse = {'Fabian' , 'Strottmann' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
+  // var adresse = {'Strottmann' , 'Fabian' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
+  var adresse = {'\nName' : 'Strottmann' , '\nFirst Name' : 'Fabian' , '\nBirth date' : '09.07.1988' , 
+  '\nAddress' : 'Schilfkamp 20' , '\nPostal code' : 30851 , '\nLocation' : 'Langehagen'};
+
   var name;
   var decision;
 
   print("Arraygroesse");
   print(adresse.length);
-  print(adresse.contains('Fabian'));
+  // print(adresse.contains('Fabian'));
   // adresse.indexOf('Fabian');
 
 
@@ -25,7 +24,7 @@ void main () {
   print("\n--------------------------------------------------");
   print("\nHello $name\n");
 
-  /* for(counter=1;counter<=2;counter++) {
+  /* for(int counter=1;counter<=2;counter++) {
     print(" $counter.Hello World!");                 
   } */
   
@@ -41,18 +40,33 @@ void main () {
     print("Insert number #2: ");
     double zahl2 = double.parse(stdin.readLineSync()!);
 
-    double result = zahl + zahl2;
+    // double result = zahl + zahl2;
+
+    double result = calc(zahl, zahl2);
+
     print("\nResult: $result");
 
-  } else if(decision == "pi") {
-    
+  } else if(decision == "pi" && name == "Fabian") {
     print("\nPersonal information\n $adresse");
-    // print("\n pi: $pi");
 
+  } else if(decision == "pi" && name != "Fabian") {
+    print("\nYou are not Fabian, you are $name");
+    print("You are not allowed to see the personal information");
+
+  } else {
+    print("\nYou have to decide between calc or pi");
   }
   
   print("\nWas für ein Hohn");
   print("\n\t-->Ende<--\n");
 
 
+}// ############################################################################################
+ // Function Sektion
+ // ############################################################################################
+
+double calc(double zahl, double zahl2) {
+  double functionResult = zahl + zahl2;
+  print("\n-->Calculation done");
+  return functionResult;;
 }
