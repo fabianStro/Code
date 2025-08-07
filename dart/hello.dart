@@ -1,18 +1,19 @@
+// import 'dart:ffi';
 import 'dart:io';
 
 void main () {
   String greet = "Hello\nThis is my first dart programm";
-  // var adresse = {'Strottmann' , 'Fabian' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
-  var adresse = {'\nName' : 'Strottmann' , '\nFirst Name' : 'Fabian' , '\nBirth date' : '09.07.1988' , 
+  // var personalInformation = {'Strottmann' , 'Fabian' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
+  var personalInformation = {'\nName' : 'Strottmann' , '\nFirst Name' : 'Fabian' , '\nBirth date' : '09.07.1988' , 
   '\nAddress' : 'Schilfkamp 20' , '\nPostal code' : 30851 , '\nLocation' : 'Langehagen'};
 
   var name;
   var decision;
 
-  print("Arraygroesse");
-  print(adresse.length);
-  // print(adresse.contains('Fabian'));
-  // adresse.indexOf('Fabian');
+  print("Array bzw. Mapgroesse");
+  print(personalInformation.length);
+  // print(personalInformation.contains('Fabian'));
+  // personalInformation.indexOf('Fabian');
 
 
   print("\n\t-->Start<--\n");
@@ -34,27 +35,24 @@ void main () {
 
   if(decision == "calc") {
 
-    print("Insert number #1: ");
-    double zahl = double.parse(stdin.readLineSync()!);
-
-    print("Insert number #2: ");
-    double zahl2 = double.parse(stdin.readLineSync()!);
-
+    // double result = calc(zahl, zahl2);
     // double result = zahl + zahl2;
 
-    double result = calc(zahl, zahl2);
+    double result = calc();
 
     print("\nResult: $result");
 
   } else if(decision == "pi" && name == "Fabian") {
-    print("\nPersonal information\n $adresse");
+    print("\nPersonal information\n $personalInformation");
 
   } else if(decision == "pi" && name != "Fabian") {
-    print("\nYou are not Fabian, you are $name");
-    print("You are not allowed to see the personal information");
+    decision = "personal information";
+    print("\nYou are not Fabian, you are $name !!!");
+    print("You are not allowed to see the $decision !!!");
 
   } else {
-    print("\nYou have to decide between calc or pi");
+    print("\nYou have to decide between calculator or personal information");
+
   }
   
   print("\nWas für ein Hohn");
@@ -65,8 +63,17 @@ void main () {
  // Function Sektion
  // ############################################################################################
 
-double calc(double zahl, double zahl2) {
+// double calc(double zahl, double zahl2)
+double calc() {
+
+  print("Insert number #1: ");
+  double zahl = double.parse(stdin.readLineSync()!);
+
+  print("Insert number #2: ");
+  double zahl2 = double.parse(stdin.readLineSync()!);
+
   double functionResult = zahl + zahl2;
   print("\n-->Calculation done");
+
   return functionResult;;
 }
