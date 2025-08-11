@@ -4,11 +4,11 @@ import 'dart:io';
 void main () {
   String greet = "Hello\nThis is my first dart programm";
   // var personalInformation = {'Strottmann' , 'Fabian' , '09.07.1988' , '\nSchilfkamp 20' , 30851 , 'Langehagen'};
-  var personalInformation = {'\nName' : 'Strottmann' , '\nFirst Name' : 'Fabian' , '\nBirth date' : '09.07.1988' , 
-  '\nAddress' : 'Schilfkamp 20' , '\nPostal code' : 30851 , '\nLocation' : 'Langehagen'};
-
+  
   var name;
   var decision;
+  var personalInformation = {'\nName' : 'Strottmann' , '\nFirst Name' : 'Fabian' , '\nBirth date' : '09.07.1988' , 
+  '\nAddress' : 'Schilfkamp 20' , '\nPostal code' : 30851 , '\nLocation' : 'Langehagen'};
 
   print("Array bzw. Mapgroesse");
   print(personalInformation.length);
